@@ -4,13 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
 <meta name="theme-color" content="#E2001A">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="Buono €5 Coop">
-<meta name="mobile-web-app-capable" content="yes">
-<meta property="og:title" content="Buono Sconto €5 — Coop Caserta">
-<meta property="og:description" content="Buono sconto immediato €5 su spesa minima €25. Valido 4·5·6 maggio solo in Coop Via Roma 115 Caserta.">
-<title>Buono €5 — Coop Caserta · 4·5·6 Maggio</title>
+<meta property="og:title" content="Buono Sconto 5euro — Coop Caserta">
+<meta property="og:description" content="Buono sconto immediato 5euro su spesa minima 25euro. Valido 4-5-6 maggio solo in Coop Via Roma 115 Caserta.">
+<title>Buono 5euro — Coop Caserta</title>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jsbarcode/3.11.5/JsBarcode.all.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
@@ -18,19 +14,15 @@
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 :root{--red:#E2001A;--teal:#1C5E7A;--cream:#F5EFE3;--white:#FFFFFF}
 html,body{min-height:100vh;background:var(--red);font-family:'DM Sans',sans-serif;overflow-x:hidden}
-
-.wrapper{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px 16px 44px;background:var(--red);position:relative;overflow:hidden}
+.wrapper{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px 16px 48px;background:var(--red);position:relative;overflow:hidden}
 .wrapper::before{content:'';position:absolute;top:-80px;right:-60px;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,.06);pointer-events:none}
 .wrapper::after{content:'';position:absolute;bottom:-50px;left:-40px;width:180px;height:180px;border-radius:50%;background:rgba(255,255,255,.04);pointer-events:none}
-
 .brand{display:flex;align-items:center;gap:10px;margin-bottom:20px;opacity:.9}
 .logo-c{width:44px;height:44px;border-radius:10px;background:var(--white);font-family:'Fraunces',serif;font-weight:900;font-size:22px;color:var(--red);display:flex;align-items:center;justify-content:center}
 .logo-t{font-size:15px;font-weight:500;color:rgba(255,255,255,.85);line-height:1.3}
 .logo-t strong{display:block;color:var(--white);font-weight:600;font-size:16px}
-
 .buono{width:100%;max-width:440px;background:var(--cream);border-radius:20px;overflow:hidden;box-shadow:0 24px 80px rgba(0,0,0,.35),0 4px 16px rgba(0,0,0,.2);animation:slideUp .5s cubic-bezier(.16,1,.3,1) both}
 @keyframes slideUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
-
 .buono-top{background:var(--red);padding:20px 22px 18px;display:flex;justify-content:space-between;align-items:flex-start}
 .bt-left h2{font-family:'Fraunces',serif;font-weight:900;font-size:24px;color:var(--white);line-height:1.1;margin-bottom:2px}
 .bt-left p{font-size:12px;color:rgba(255,255,255,.65);font-weight:500}
@@ -38,60 +30,34 @@ html,body{min-height:100vh;background:var(--red);font-family:'DM Sans',sans-seri
 .bt-right .days{font-size:11px;color:rgba(255,255,255,.7);font-weight:500;margin-bottom:3px}
 .bt-right .dates{font-family:'Fraunces',serif;font-weight:700;font-size:18px;color:var(--white);line-height:1}
 .bt-right .month{font-size:11px;color:rgba(255,255,255,.75);font-weight:600;letter-spacing:.05em;text-transform:uppercase;margin-top:1px}
-
-/* FIX PRINCIPALE: 5€ inline */
 .buono-body{padding:22px 22px 18px;display:flex;gap:18px;align-items:center}
 .bb-left{flex:1}
-.valor-wrap{display:flex;align-items:flex-start;line-height:1;gap:4px}
+.valor-wrap{display:flex;align-items:flex-start;gap:4px}
 .valor-num{font-family:'Fraunces',serif;font-weight:900;font-size:108px;line-height:.85;color:var(--teal)}
 .valor-sym{font-family:'Fraunces',serif;font-weight:900;font-size:64px;line-height:1;color:var(--teal);padding-top:6px}
-
 .bb-right{width:148px;flex-shrink:0}
 .cond-badge{display:inline-flex;align-items:center;gap:5px;background:var(--teal);color:var(--white);font-size:11px;font-weight:600;padding:5px 10px;border-radius:20px;margin-bottom:10px}
 .cond-badge svg{width:12px;height:12px;fill:none;stroke:currentColor;stroke-width:2;flex-shrink:0}
 .cond-text{font-size:13px;color:var(--teal);font-weight:500;margin-bottom:7px;line-height:1.4}
 .cond-text strong{font-weight:700;font-size:15px;display:block}
 .cond-small{font-size:10.5px;color:#777;line-height:1.6}
-
 .buono-div{margin:0 22px;border:0;border-top:1.5px dashed rgba(0,0,0,.12);position:relative}
 .buono-div::before,.buono-div::after{content:'';position:absolute;top:-9px;width:18px;height:18px;border-radius:50%;background:var(--red)}
 .buono-div::before{left:-30px}
 .buono-div::after{right:-30px}
-
-.buono-bc{padding:18px 22px 18px;display:flex;flex-direction:column;align-items:center;gap:8px;background:#FFFFFF}
+.buono-bc{padding:18px 22px 18px;display:flex;flex-direction:column;align-items:center;gap:8px;background:#fff}
 .buono-bc svg{max-width:270px;width:100%}
 .bc-note{font-size:10px;color:#888;letter-spacing:.04em}
-
 .buono-foot{background:var(--teal);padding:10px 22px;display:flex;justify-content:space-between;align-items:center}
 .bf-addr{font-size:11px;color:rgba(255,255,255,.75);font-weight:500}
 .bf-logo{font-family:'Fraunces',serif;font-weight:900;font-size:16px;color:var(--white);letter-spacing:-1px;background:rgba(255,255,255,.15);border-radius:6px;padding:3px 8px}
-
 .note-box{max-width:440px;width:100%;margin-top:14px;background:rgba(255,255,255,.08);border-radius:12px;padding:12px 16px;font-size:11px;color:rgba(255,255,255,.5);line-height:1.6;text-align:center}
-
-.btn-wrap{max-width:440px;width:100%;margin-top:14px;display:flex;flex-direction:column;gap:8px}
-.btn{width:100%;padding:15px;border:none;border-radius:14px;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:transform .1s,background .15s;-webkit-appearance:none}
-.btn:active{transform:scale(.98)}
-.btn svg{width:18px;height:18px;flex-shrink:0;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.btn-download{background:var(--white);color:var(--red)}
-.btn-download:active{background:#f5f5f5}
-.btn-wallet{background:rgba(0,0,0,.35);color:var(--white);border:1px solid rgba(255,255,255,.25)}
-.btn-share{background:rgba(255,255,255,.12);color:rgba(255,255,255,.85);border:1px solid rgba(255,255,255,.2);font-size:14px;padding:13px}
-
-.toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(80px);background:#1A1A1A;color:#fff;padding:12px 22px;border-radius:30px;font-size:13px;font-weight:500;white-space:nowrap;transition:transform .35s cubic-bezier(.16,1,.3,1),opacity .35s;opacity:0;z-index:999;pointer-events:none}
+.btn-wrap{max-width:440px;width:100%;margin-top:14px}
+.btn-download{width:100%;padding:16px;border:none;border-radius:14px;font-family:'DM Sans',sans-serif;font-size:16px;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;background:var(--white);color:var(--red);transition:transform .1s,opacity .15s;-webkit-appearance:none}
+.btn-download:active{transform:scale(.98);opacity:.9}
+.btn-download svg{width:20px;height:20px;flex-shrink:0;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#111;color:#fff;padding:13px 24px;border-radius:30px;font-size:13px;font-weight:500;transition:transform .35s cubic-bezier(.16,1,.3,1),opacity .35s;opacity:0;z-index:999;pointer-events:none;white-space:nowrap}
 .toast.show{transform:translateX(-50%) translateY(0);opacity:1}
-
-.modal-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:900;align-items:flex-end;justify-content:center}
-.modal-bg.open{display:flex}
-.modal{background:var(--white);border-radius:22px 22px 0 0;padding:24px 22px 36px;width:100%;max-width:440px}
-.modal h3{font-size:17px;font-weight:600;color:#111;margin-bottom:6px}
-.modal p{font-size:13px;color:#666;margin-bottom:20px;line-height:1.55}
-.modal-opt{display:flex;flex-direction:column;gap:10px}
-.modal-btn{width:100%;padding:14px;border-radius:12px;border:none;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:10px;-webkit-appearance:none}
-.modal-btn-apple{background:#000;color:#fff}
-.modal-btn-google{background:#fff;color:#111;border:1px solid #ddd}
-.modal-btn-home{background:#F0F4FF;color:#1E2761}
-.modal-close{margin-top:12px;width:100%;padding:13px;border-radius:12px;border:none;background:#f5f5f5;color:#666;font-family:'DM Sans',sans-serif;font-size:14px;cursor:pointer}
-
 @media print{
   body,html{background:white}
   .wrapper{background:white;padding:0;min-height:auto}
@@ -149,7 +115,7 @@ html,body{min-height:100vh;background:var(--red);font-family:'DM Sans',sans-seri
     </div>
 
     <div class="buono-foot">
-      <span class="bf-addr">📍 Via Roma 115 · Caserta</span>
+      <span class="bf-addr">Via Roma 115 · Caserta</span>
       <span class="bf-logo">coop</span>
     </div>
   </div>
@@ -159,109 +125,84 @@ html,body{min-height:100vh;background:var(--red);font-family:'DM Sans',sans-seri
   </div>
 
   <div class="btn-wrap">
-    <button class="btn btn-download" id="btn-dl" onclick="downloadBuono()">
+    <button class="btn-download" id="btn-dl" onclick="downloadBuono()">
       <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-      Scarica immagine del buono
+      Salva buono nel telefono
     </button>
-    <button class="btn btn-wallet" onclick="openWalletModal()">
-      <svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M16 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/><path d="M2 10h20"/></svg>
-      Aggiungi al Wallet / Schermata Home
-    </button>
-    <button class="btn btn-share" onclick="shareBuono()">
-      <svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
-      Condividi questo buono
-    </button>
-  </div>
-</div>
-
-<div class="modal-bg" id="wallet-modal" onclick="closeWalletModal(event)">
-  <div class="modal">
-    <h3>Aggiungi al Wallet</h3>
-    <p>Salva il buono come immagine nel rullino oppure aggiungilo alla schermata Home per aprirlo con un tap quando sei alla cassa.</p>
-    <div class="modal-opt">
-      <button class="modal-btn modal-btn-apple" onclick="downloadBuono();closeModal()">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-        iPhone — Salva nel rullino
-      </button>
-      <button class="modal-btn modal-btn-google" onclick="downloadBuono();closeModal()">
-        <svg width="20" height="20" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
-        Android — Salva nel rullino
-      </button>
-      <button class="modal-btn modal-btn-home" onclick="showHomeInstructions()">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E2761" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-        Aggiungi alla schermata Home
-      </button>
-    </div>
-    <button class="modal-close" onclick="closeModal()">Chiudi</button>
   </div>
 </div>
 
 <div class="toast" id="toast"></div>
 
 <script>
-JsBarcode('#bc','7901096504010',{
-  format:'EAN13',width:2.4,height:72,displayValue:true,
-  font:'DM Sans, sans-serif',textMargin:4,fontSize:14,
-  lineColor:'#000000',background:'#FFFFFF',margin:0,marginBottom:2
+JsBarcode('#bc', '7901096504010', {
+  format: 'EAN13',
+  width: 2.4,
+  height: 72,
+  displayValue: true,
+  font: 'DM Sans, sans-serif',
+  textMargin: 4,
+  fontSize: 14,
+  lineColor: '#000000',
+  background: '#FFFFFF',
+  margin: 0,
+  marginBottom: 2
 });
 
-function showToast(msg,dur=3000){
-  const t=document.getElementById('toast');
-  t.textContent=msg;t.classList.add('show');
-  setTimeout(()=>t.classList.remove('show'),dur);
+function showToast(msg, dur) {
+  dur = dur || 3000;
+  var t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(function() { t.classList.remove('show'); }, dur);
 }
 
-async function downloadBuono(){
-  const btn=document.getElementById('btn-dl');
-  const orig=btn.innerHTML;
-  btn.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18" style="animation:spin 1s linear infinite"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> Creo immagine...';
-  btn.disabled=true;
-  try{
-    const card=document.getElementById('buono-card');
-    const canvas=await html2canvas(card,{
-      scale:3,useCORS:true,
-      backgroundColor:'#F5EFE3',
-      width:card.offsetWidth,height:card.offsetHeight,
-      logging:false
+async function downloadBuono() {
+  var btn = document.getElementById('btn-dl');
+  var orig = btn.innerHTML;
+  btn.innerHTML = 'Creo immagine...';
+  btn.disabled = true;
+  try {
+    var card = document.getElementById('buono-card');
+    var canvas = await html2canvas(card, {
+      scale: 3,
+      useCORS: true,
+      backgroundColor: '#F5EFE3',
+      width: card.offsetWidth,
+      height: card.offsetHeight,
+      logging: false
     });
-    const url=canvas.toDataURL('image/png');
-    const a=document.createElement('a');
-    a.download='buono-coop-caserta-5euro.png';
-    a.href=url;document.body.appendChild(a);a.click();document.body.removeChild(a);
-    showToast('✓ Immagine salvata! Cercala nel rullino.');
-  }catch(e){
-    showToast('Usa il tasto "Condividi" del browser per salvare');
-  }finally{
-    btn.innerHTML=orig;btn.disabled=false;
+    var url = canvas.toDataURL('image/png');
+    // Su mobile prova la condivisione nativa con immagine
+    if (navigator.share && navigator.canShare) {
+      try {
+        var blob = await (await fetch(url)).blob();
+        var file = new File([blob], 'buono-coop-5euro.png', { type: 'image/png' });
+        if (navigator.canShare({ files: [file] })) {
+          await navigator.share({
+            files: [file],
+            title: 'Buono 5euro Coop Caserta',
+            text: 'Il mio buono sconto 5euro valido 4-5-6 maggio'
+          });
+          btn.innerHTML = orig;
+          btn.disabled = false;
+          return;
+        }
+      } catch(e) {}
+    }
+    // Fallback: download diretto
+    var a = document.createElement('a');
+    a.download = 'buono-coop-caserta-5euro.png';
+    a.href = url;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    showToast('Immagine salvata nel rullino!');
+  } catch(e) {
+    showToast('Fai uno screenshot del buono per salvarlo');
   }
-}
-
-function openWalletModal(){
-  document.getElementById('wallet-modal').classList.add('open');
-}
-function closeWalletModal(e){
-  if(e.target.id==='wallet-modal')closeModal();
-}
-function closeModal(){
-  document.getElementById('wallet-modal').classList.remove('open');
-}
-function showHomeInstructions(){
-  closeModal();
-  const ios=/iPad|iPhone|iPod/.test(navigator.userAgent);
-  if(ios){
-    showToast('Tocca ↑ in basso → "Aggiungi a schermata Home"',5000);
-  }else{
-    showToast('Menu ⋮ in alto a destra → "Aggiungi a schermata Home"',5000);
-  }
-}
-async function shareBuono(){
-  const url=window.location.href;
-  if(navigator.share){
-    try{await navigator.share({title:'Buono €5 Coop Caserta',text:'Buono €5 su spesa 25€ in Coop Via Roma 115. Valido 4-5-6 maggio!',url});}catch(e){}
-  }else{
-    try{await navigator.clipboard.writeText(url);showToast('✓ Link copiato!');}
-    catch(e){prompt('Copia il link:',url);}
-  }
+  btn.innerHTML = orig;
+  btn.disabled = false;
 }
 </script>
 </body>
